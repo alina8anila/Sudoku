@@ -1,0 +1,50 @@
+@startuml
+class Cell {
+  -__val: int
+  -__possible: set
+  -__row: int
+  -__col: int
+  +val: int
+  +row: int
+  +col: int
+  +possible: set[int]
+  +val(new)
+  +check(val)
+  +erase(val)
+  +add(val)
+}
+
+class SudokuGrid {
+  -__cell: list[list[Cell]]
+  -__level: int
+  +cell: int
+  +level: int
+  +go_in_all(row, col)
+  +check(row, col, val)
+  +set(row, col, val)
+  +reset(row, col, val)
+  +known(row, col)
+  +find_empty()
+  +find_empty_random()
+  +__str__()
+}
+
+class Solver {
+  +constraint_propagation()
+  +constraint_satisfaction()
+  +constraint_satisfaction_prolog()
+  
+}
+
+class Generator{
+  +fill_random()
+  +fill_all()
+  +clean()
+  +removesome()
+}
+
+SudokuGrid "has-a" *-- "81" Cell
+SudokuGrid --> Solver
+Solver --> Generator
+
+@enduml

@@ -19,8 +19,7 @@
 
 Встановлення
 1. Клонуйте репозиторій
-`git clone https://github.com/ukma-cs-pl-2025/labs-alina8anila`
-`cd labs-alina8anila/final_project`
+`git clone https://github.com/alina8anila/Sudoku.git`
 2. Встановіть залежності: `pip install -r requirements.txt`
 3. Запустіть: `python3 front.py`
 Потрібен Python 3.10+
